@@ -24,6 +24,12 @@ jobs:
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
+      
+    - name: Build JAR with Maven
+      run: mvn package
+
+    - name: Build JAR with Gradle
+      run: ./gradlew build
 
     - name: Build with Gradle
       run: ./gradlew build
